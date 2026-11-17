@@ -4,7 +4,12 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npm run compile:css && concurrently -k \"npm:dev:css\" \"npm:dev:server\"",
+    "compile:css": "tailwindcss -i ./src/input.css -o ./public/assets/styles.css",
+    "dev:css": "tailwindcss -i ./src/input.css -o ./public/assets/styles.css --watch",
+    "dev:server": "browser-sync start --server public --files \"public/**/*.html,public/**/*.js,public/**/*.css\" --port 3000 --listen 127.0.0.1 --no-open --no-ui --no-notify --no-online",
+    "build": "tailwindcss -i ./src/input.css -o ./public/assets/styles.css --minify"
   },
   "repository": {
     "type": "git",
@@ -20,6 +25,8 @@
   "homepage": "https://github.com/kuroax/FenomenoA7#readme",
   "devDependencies": {
     "@tailwindcss/cli": "^4.3.5",
-    "tailwindcss": "^4.3.5"
+    "tailwindcss": "^4.3.5",
+    "browser-sync": "^3.0.4",
+    "concurrently": "^9.2.1"
   }
 }

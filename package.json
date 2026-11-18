@@ -9,7 +9,10 @@
     "compile:css": "tailwindcss -i ./src/input.css -o ./public/assets/styles.css",
     "dev:css": "tailwindcss -i ./src/input.css -o ./public/assets/styles.css --watch",
     "dev:server": "browser-sync start --server public --files \"public/**/*.html,public/**/*.js,public/**/*.css\" --port 3000 --listen 127.0.0.1 --no-open --no-ui --no-notify --no-online",
-    "build": "tailwindcss -i ./src/input.css -o ./public/assets/styles.css --minify"
+    "build": "tailwindcss -i ./src/input.css -o ./public/assets/styles.css --minify",
+    "dev:api": "node --watch server/server.mjs",
+    "start:api": "node server/server.mjs",
+    "test:api": "node --test server/tests/*.test.mjs"
   },
   "repository": {
     "type": "git",

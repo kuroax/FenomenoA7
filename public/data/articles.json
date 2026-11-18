@@ -1,0 +1,5 @@
+[
+  {"id":"anime-memorable","category":"Anime","title":"¿Qué hace memorable a una historia de anime?","description":"Un análisis editorial sobre estructura, personajes, mundo visual y emoción.","url":"articulos/analisis-anime.html","keywords":["narrativa","animación","personajes","historias"]},
+  {"id":"videojuegos-mundos","category":"Videojuegos","title":"Explorar también es contar: el lenguaje de los mundos interactivos","description":"Cómo los espacios, las reglas y las decisiones construyen sentido en un videojuego.","url":"articulos/analisis-videojuegos.html","keywords":["juegos","interactividad","mecánicas","exploración"]},
+  {"id":"peliculas-mirada","category":"Películas","title":"La mirada en movimiento: cómo una película organiza nuestra atención","description":"Una lectura de la puesta en escena, el montaje y el sonido como herramientas narrativas.","url":"articulos/analisis-peliculas.html","keywords":["cine","montaje","imagen","sonido"]}
+]

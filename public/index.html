@@ -24,6 +24,7 @@
         <p class="text-sm font-bold tracking-[0.18em] text-stone-950 dark:text-stone-100">FENOMENO A7</p>
         <nav aria-label="Navegación principal">
           <ul class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-stone-600 dark:text-stone-300 sm:gap-x-8">
+            <li><a class="rounded-sm py-2 hover:text-amber-800 dark:hover:text-amber-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-700 dark:focus-visible:outline-amber-400" href="#articulos">Artículos</a></li>
             <li><a class="rounded-sm py-2 hover:text-amber-800 dark:hover:text-amber-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-700 dark:focus-visible:outline-amber-400" href="#anime">Anime</a></li>
             <li><a class="rounded-sm py-2 hover:text-amber-800 dark:hover:text-amber-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-700 dark:focus-visible:outline-amber-400" href="#videojuegos">Videojuegos</a></li>
             <li><a class="rounded-sm py-2 hover:text-amber-800 dark:hover:text-amber-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-700 dark:focus-visible:outline-amber-400" href="#peliculas">Películas</a></li>
@@ -51,18 +52,43 @@
         </p>
       </section>
 
-      <article class="mt-16 border-y border-stone-300 dark:border-stone-700 bg-white dark:bg-stone-900 px-6 py-8 sm:mt-20 sm:px-10 sm:py-10 lg:px-12">
-        <h2 class="max-w-3xl text-2xl font-semibold leading-snug tracking-tight text-stone-950 dark:text-stone-100 sm:text-3xl">
-          ¿Qué hace memorable a una historia de anime?
-        </h2>
-        <p class="mt-5 max-w-3xl text-base leading-7 text-stone-600 dark:text-stone-300 sm:text-lg sm:leading-8">
-          Un análisis editorial sobre cómo la estructura, los personajes, el
-          mundo visual y la emoción se combinan para permanecer en la memoria.
-        </p>
-        <a class="mt-6 inline-flex rounded-sm font-medium text-amber-800 dark:text-amber-300 underline decoration-amber-700 dark:decoration-amber-400 underline-offset-4 hover:text-amber-950 dark:hover:text-amber-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-700 dark:focus-visible:outline-amber-400" href="./articulos/analisis-anime.html">Leer análisis</a>
-      </article>
+      <section id="articulos" aria-labelledby="titulo-articulos" class="mt-16 sm:mt-20">
+        <h2 id="titulo-articulos" class="text-2xl font-semibold tracking-tight sm:text-3xl">Explorar artículos</h2>
+        <p class="mt-3 max-w-2xl leading-7 text-stone-600 dark:text-stone-300">Busca por tema o filtra por categoría. Los enlaces de esta lista también están disponibles sin JavaScript.</p>
+        <form data-article-search role="search" class="mt-6 grid gap-4 sm:grid-cols-[minmax(0,1fr)_15rem]">
+          <div><label for="busqueda-articulos" class="block text-sm font-medium">Buscar artículos</label><input id="busqueda-articulos" name="q" type="search" class="mt-2 min-h-11 w-full rounded-md border border-stone-300 bg-white px-3 text-base dark:border-stone-700 dark:bg-stone-900" placeholder="Título o tema"></div>
+          <div><label for="filtro-categoria" class="block text-sm font-medium">Categoría</label><select id="filtro-categoria" data-category-filter class="mt-2 min-h-11 w-full rounded-md border border-stone-300 bg-white px-3 text-base dark:border-stone-700 dark:bg-stone-900"><option value="">Todas las categorías</option><option>Anime</option><option>Videojuegos</option><option>Películas</option></select></div>
+          <button type="reset" class="min-h-11 w-fit rounded-md border border-stone-300 px-3 py-2 text-sm font-medium focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-700 dark:border-stone-700 dark:focus-visible:outline-amber-400">Limpiar búsqueda y filtros</button>
+        </form>
+        <p data-search-status class="mt-4 min-h-6 text-sm text-stone-600 dark:text-stone-300" aria-live="polite">La lista inicial muestra los artículos disponibles.</p>
+        <div data-article-results class="mt-5 grid gap-8 md:grid-cols-3">
+          <article class="border-t border-stone-300 pt-5 dark:border-stone-700"><h3 class="text-xl font-semibold"><a class="underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-amber-700" href="./articulos/analisis-anime.html">¿Qué hace memorable a una historia de anime?</a></h3><p class="mt-2 text-sm text-amber-800 dark:text-amber-300">Anime</p><p class="mt-3 leading-7 text-stone-600 dark:text-stone-300">Estructura, personajes, mundo visual y emoción en las historias que permanecen.</p></article>
+          <article class="border-t border-stone-300 pt-5 dark:border-stone-700"><h3 class="text-xl font-semibold"><a class="underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-amber-700" href="./articulos/analisis-videojuegos.html">Explorar también es contar: el lenguaje de los mundos interactivos</a></h3><p class="mt-2 text-sm text-amber-800 dark:text-amber-300">Videojuegos</p><p class="mt-3 leading-7 text-stone-600 dark:text-stone-300">Cómo las reglas, los espacios y las decisiones dan forma a una experiencia jugable.</p></article>
+          <article class="border-t border-stone-300 pt-5 dark:border-stone-700"><h3 class="text-xl font-semibold"><a class="underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-amber-700" href="./articulos/analisis-peliculas.html">La mirada en movimiento: cómo una película organiza nuestra atención</a></h3><p class="mt-2 text-sm text-amber-800 dark:text-amber-300">Películas</p><p class="mt-3 leading-7 text-stone-600 dark:text-stone-300">Puesta en escena, montaje y sonido como herramientas para guiar la mirada.</p></article>
+        </div>
+      </section>
 
-      <div class="mt-16 grid grid-cols-1 gap-8 sm:mt-20 md:grid-cols-3 md:gap-6 lg:gap-10">
+      <section aria-labelledby="titulo-guardar" class="mt-16 grid gap-10 border-y border-stone-300 py-8 dark:border-stone-700 md:grid-cols-2">
+        <div><h2 id="titulo-guardar" class="text-xl font-semibold">Artículos guardados</h2><p class="mt-2 text-sm leading-6 text-stone-600 dark:text-stone-300">Tus marcadores se guardan solo en este navegador.</p><p data-bookmark-empty class="mt-3 text-sm text-stone-500 dark:text-stone-400">Aún no has guardado artículos.</p><ul data-bookmark-list class="mt-3 list-inside list-disc space-y-2"></ul></div>
+        <div><h2 class="text-xl font-semibold">Lecturas recientes</h2><p class="mt-2 text-sm leading-6 text-stone-600 dark:text-stone-300">Historial local de este navegador, con un máximo de ocho artículos.</p><p data-history-empty class="mt-3 text-sm text-stone-500 dark:text-stone-400">Todavía no hay lecturas recientes.</p><ul data-history-list class="mt-3 list-inside list-disc space-y-2"></ul><button data-history-clear type="button" class="mt-4 min-h-11 rounded-md border border-stone-300 px-3 py-2 text-sm font-medium focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-700 dark:border-stone-700 dark:focus-visible:outline-amber-400">Borrar historial</button></div>
+      </section>
+
+      <section aria-labelledby="titulo-formulario" class="mt-12 max-w-xl">
+        <h2 id="titulo-formulario" class="text-lg font-semibold">Práctica: validación de formulario</h2>
+        <p class="mt-2 text-sm leading-6 text-stone-600 dark:text-stone-300">Ejercicio local de HTML y JavaScript. Usa datos ficticios; no se envía ni se guarda nada.</p>
+        <form data-demo-form class="mt-4">
+          <fieldset disabled class="grid gap-4">
+          <div><label for="demo-nombre" class="block text-sm font-medium">Nombre de ejemplo</label><input id="demo-nombre" name="nombre" type="text" required minlength="2" autocomplete="off" class="mt-1 min-h-11 w-full rounded-md border border-stone-300 bg-white px-3 dark:border-stone-700 dark:bg-stone-900"></div>
+          <div><label for="demo-correo" class="block text-sm font-medium">Correo ficticio</label><input id="demo-correo" name="correo" type="email" required autocomplete="off" class="mt-1 min-h-11 w-full rounded-md border border-stone-300 bg-white px-3 dark:border-stone-700 dark:bg-stone-900"></div>
+          <button type="submit" class="min-h-11 w-fit rounded-md bg-stone-900 px-4 py-2 text-sm font-medium text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-700 dark:bg-stone-100 dark:text-stone-900 dark:focus-visible:outline-amber-400">Validar localmente</button>
+          </fieldset>
+          <p data-form-message class="min-h-6 text-sm" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section aria-labelledby="titulo-categorias" class="mt-16">
+      <h2 id="titulo-categorias" class="sr-only">Categorías editoriales</h2>
+      <div class="grid grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-6 lg:gap-10">
         <section id="anime" aria-labelledby="titulo-anime" class="border-t border-stone-300 dark:border-stone-700 pt-5">
           <h2 id="titulo-anime" class="text-xl font-semibold tracking-tight text-stone-950 dark:text-stone-100">Anime</h2>
           <p class="mt-3 text-base leading-7 text-stone-600 dark:text-stone-300">
@@ -87,6 +113,7 @@
           </p>
         </section>
       </div>
+      </section>
     </main>
 
     <footer class="border-t border-stone-200 dark:border-stone-800 bg-stone-100 dark:bg-stone-900">
